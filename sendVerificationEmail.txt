@@ -1,0 +1,49 @@
+public void sendVerificationEmail(String recipientEmail, String verificationCode){
+
+        String SENDER_EMAIL = "nguyenquynh170820@gmail.com";  //email để gửi mail xác nhận
+        String SENDER_PASSWORD = "rkuaiiybxkkaojwr";
+        //"jtck fknk jhfy pegc";
+        String SMTP_HOST = "smtp.gmail.com";    //Máy chủ SMTP
+        String SMTP_PORT = "587";               //Cổng SMTP
+
+        //Thiết lập cấu hình email (SMTP host, port, authentication, và starttls)
+        Properties properties = System.getProperties();
+        properties.setProperty("mail.smtp.host", SMTP_HOST);
+        properties.setProperty("mail.smtp.port", SMTP_PORT);
+        properties.setProperty("mail.smtp.auth", "true");
+        properties.setProperty("mail.smtp.starttls.enable", "true");
+
+        // Authenticate the sender's email account
+        Session session = Session.getDefaultInstance(properties, new Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(SENDER_EMAIL, SENDER_PASSWORD);
+            }
+        });   //Phiên làm viejc với máy chủ email
+
+        try {
+            // Create a default MimeMessage object
+            MimeMessage message = new MimeMessage(session);
+
+            // Set From: header field of the header
+            //Đặt địa chỉ email người gửi(SENDER_EMAIL) vào trường "From" của email
+            message.setFrom(new InternetAddress("tbxuan611@gmail.com"));
+
+            // Set To: header field of the header
+            //Thêm địa chỉ email người nhận(recipientEmail) vào trường "To" của email
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress("nguyenquynh170602@gmail.com"));
+
+            // Set Subject: header field
+            //Đặt chủ đề email thành "Account Verification Code"
+            message.setSubject("gt");
+
+            // Đặt nội dung email
+            message.setText("Your verification code is: ");
+
+            // Send message
+            Transport.send(message);
+
+            System.out.println("Verification email sent successfully!");
+        } catch (MessagingException mex) {
+            mex.printStackTrace();
+        }
+    }

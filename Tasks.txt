@@ -1,0 +1,25 @@
+Tuần 1:
+- Đăng ký tài khoản: khi mới thực hiện đăng ký tài khoản thì trạng thái của tài khoản sẽ là chưa kích hoạt, sau khi đăng ký sẽ có chức năng gửi mã xác nhận về email 
+- Xác thực đăng ký tài khoản: chức năng này để người dùng nhập mã xác nhận xem có trùng với mã xác nhận được gửi về email hay không, nếu trùng khớp thì chuyển trạng thái tài khoản sang đã kích hoạt
+- Đăng nhập: xác thực tài khoản đăng nhập có thông tin như thế nào bao gồm quyền, email,..... thông qua mã token
+- Đối mật khẩu: khi thực hiện chức năng đổi mật khẩu thì controller không được truyền vào id của tài khoản, mà nó phải tự nhận chức năng đổi mật khẩu đang thực hiện cho tài khoản đang trong phiên đăng nhập
+- quên mật khẩu: gửi mã xác nhận về email
+- tạo mật khẩu mới: nhập mã xác nhận trùng khớp và tạo mật khẩu mới
+
+Tuần 2:
+-All:
+ + Xử lí phần đăng ảnh của phật tử nữa (lưu trên cloudinary)
+ + Tạo đơn đăng ký tham gia đạo tràng, sửa xóa
+-Admin:
+ + Lọc dữ liệu và phân trang phật tử theo tên, email, giới tính
+ + Duyệt đơn đăng ký: gửi đơn đăng ký phải là người đang đăng nhập gửi, còn duyệt đơn thì admin duyệt. Khi đơn đăng ký được duyệt thì số người tham gia ở bảng đạo tràng tăng lên 1. Lọc dữ liệu và phân trang dữ liệu
+ + Thêm sửa xóa đạo tràng, lọc dữ liệu và phân trang theo khoảng thời gian, trụ trì
+
+Tuần 3:
+- CRUD bài viết: id của người tạo bài phải là của user đang đăng nhập
+- CRUD bình luận bài viết: đếm số lượng bình luận của bài viết sau khi bình luận hoặc xóa bình luận
+- Like bài viết: đếm số lượng like của bài viết sau khi like hay bỏ like
+- Like bình luận bài viết
+
+Tuần 4:
+Tối ưu code

@@ -1,0 +1,40 @@
+cac quyển hạn: admin, chủ trì, phật tử
+
+Các chức năng:
+Chùa
+ - Tạo mới một chùa
+ - Hiển thị thông tin các chùa
+ - Cập nhật thông tin chùa
+ - Xóa chùa
+
+Tài khoản
+ - Đăng ký tài khoản
+ - Xác thực đăng ký tài khoản
+ - Đăng nhập (-> chuyển sang màn hình quản lý tài khoản)
+ - Gửi yêu cầu xóa tài khoản
+ - Duyệt xóa tài khoản
+ - Quên mật khẩu
+ - Đổi mật khẩu 
+ - Cập nhật lại thông tin Phật tử
+
+Bài viết
+ - Thêm loại bài viết
+ - Hiển thị danh sách các thể loại
+ - Đăng bài
+ - Duyệt bài viết
+ - Hiển thị bài viết lên đầu trang chủ
+ - Chỉnh sửa bài viết 
+ - Xóa bài
+ - Thích bài viết
+ - Xóa thích bài viết
+ - Bình luận bài viết
+ - Chỉnh sửa bình luận bài viết
+ - Xóa bình luận
+
+Đạo Tràng
+ - Thêm mới một buổi đạo tràng
+ - Hiển thị thông tin buổi đạo tràng lên đầu trang Đạo Tràng
+ - Cập nhật thông tin buổi đạo tràng
+ - Đăng ký Đạo Tràng( có thể đăng ký khi không trùng thời gian với các buổi đạo trang đã đăng ký)
+ - Duyệt đơn đăng ký đạo tràng(tăng số thành viên tham gia của Đạo tràng)
+ 
